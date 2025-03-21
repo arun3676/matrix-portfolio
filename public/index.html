@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arun.ai | AI & Software Developer</title>
+    <meta name="description" content="Arun's personal website - AI Developer, Software Engineer, and Martian waiting for AGI">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph Meta Tags for better sharing -->
+    <meta property="og:title" content="arun.ai | AI & Software Developer">
+    <meta property="og:description" content="Arun's personal website - AI Developer, Software Engineer, and Martian waiting for AGI">
+    <meta property="og:url" content="https://arun3676.github.io">
+    <meta property="og:type" content="website">
+    <!-- Add these meta tags to the <head> section of your index.html file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <style>
+      /* Fix for image display issues */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      /* Ensure videos are responsive */
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Fix for missing image placeholders */
+      .image-placeholder {
+        min-height: 200px;
+        background-color: rgba(0, 255, 0, 0.1);
+        border: 1px solid var(--neon-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .image-placeholder:before {
+        content: "Image";
+        color: var(--neon-green);
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+      
+      /* Use proper path for image backgrounds */
+      .article-image .image-placeholder.ai {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('./images/ai-article.jpg') center/cover no-repeat;
+      }
+      
+      .article-image .image-placeholder.data {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('./images/data-article.jpg') center/cover no-repeat;
+      }
+    </style>
+</head>
+<body>
+    <div id="matrix-background"></div>
+    <div class="loading-screen">
+        <div class="terminal">
+            <p class="terminal-text">Initializing arun.ai</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <h1><a href="/" class="logo">ARUN.AI</a></h1>
+            <p class="caption">Martian waiting for AGI</p>
+        </div>
+        <nav>
+            <div class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#images">AI Images</a></li>
+                <li><a href="#raw">Raw</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 class="glitch-text" data-text="Hello, World!">Hello, World!</h2>
+                    <div class="typewriter">
+                        <span id="typewriter-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <div class="intro-buttons">
+                        <a href="#about" class="btn primary-btn">Learn More</a>
+                        <a href="https://github.com/arun3676" class="btn secondary-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="avatar-container">
+                        <div class="avatar-matrix"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>AI enthusiast with a passion for creativity and technology.</p>
+                    <p>Exploring the frontiers of what's possible with emerging technologies.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                    <div class="song-quote">
+                        "One step forward and two steps back, still got a lot to learn that's a fact"
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+            <div id="projects-container">
+                <!-- Projects will be loaded dynamically -->
+                <div class="project-loading">
+                    <div class="project-loading-animation">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>Loading projects...</p>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <a href="https://github.com/arun3676" target="_blank" class="view-more-btn">View All Projects on GitHub</a>
+            </div>
+        </section>
+
+        <section id="articles">
+            <h2>Featured Articles</h2>
+            <div class="articles-grid">
+                <article class="medium-article" data-category="ai">
+                    <div class="article-image">
+                        <div class="image-placeholder ai"></div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Building an AI-Powered Learning Path Generator</h3>
+                        <p>A deep dive into RAG and LLMs</p>
+                        <a href="https://medium.com/@arunn9694/building-an-ai-powered-learning-path-generator-a-deep-dive-into-rag-and-llms-d8e0eb080ccb" target="_blank" class="read-more">Read Article</a>
+                    </div>
+                </article>
+                <article class="medium-article" data-category="data">
+                    <div class="article-image">
+                        <div class="image-placeholder data"></div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Exploring Microsoft Excel Copilot</h3>
+                        <p>My journey in data analysis with EV charging data</p>
+                        <a href="https://medium.com/@arunn9694/exploring-microsoft-excel-copilot-my-journey-in-data-analysis-with-ev-charging-data-f33ca6ff7d03" target="_blank" class="read-more">Read Article</a>
+                    </div>
+                </article>
+                <article class="medium-article" data-category="ai">
+                    <div class="article-image">
+                        <div class="image-placeholder ai"></div>
+                    </div>
+                    <div class="article-content">
+                        <h3>How LLMs are Transforming Data Analysis</h3>
+                        <p>A deep dive into the Titanic dataset</p>
+                        <a href="https://medium.com/@arunn9694/%EF%B8%8F-how-llms-are-transforming-data-analysis-a-deep-dive-into-the-titanic-dataset-f163a31835b2" target="_blank" class="read-more">Read Article</a>
+                    </div>
+                </article>
+                <article class="medium-article" data-category="ai">
+                    <div class="article-image">
+                        <div class="image-placeholder data"></div>
+                    </div>
+                    <div class="article-content">
+                        <h3>AI in the Workplace</h3>
+                        <p>A data analyst's perspective on harnessing AI for enhanced insights</p>
+                        <a href="https://medium.com/@arunn9694/ai-in-the-workplace-a-data-analysts-perspective-harnessing-the-power-of-ai-for-enhanced-insights-381f97f3eeea" target="_blank" class="read-more">Read Article</a>
+                    </div>
+                </article>
+            </div>
+            <div class="view-more-container">
+                <a href="https://medium.com/@arunn9694" target="_blank" class="view-more-btn">Read More on Medium</a>
+            </div>
+        </section>
+
+       
+        <section id="music">
+            <h2>Music Explorer</h2>
+            
+            <div class="music-grid">
+                <!-- Song 1 -->
+                <div class="music-card">
+                    <div class="music-thumbnail matrix-theme">
+                        <div class="thumbnail-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="music-details">
+                        <h3>Maa Meri</h3>
+                        <p>Ambient electronic with matrix-inspired beats</p>
+                        <audio controls>
+                            <source src="audio/Maa Meri.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                
+                <!-- Song 2 -->
+                <div class="music-card">
+                    <div class="music-thumbnail cyberpunk-theme">
+                        <div class="thumbnail-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="music-details">
+                        <h3>Only You</h3>
+                        <p>Synthwave with retro-futuristic vibes</p>
+                        <audio controls>
+                            <source src="audio/Only You.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                
+                <!-- Song 3 -->
+                <div class="music-card">
+                    <div class="music-thumbnail quantum-theme">
+                        <div class="thumbnail-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="music-details">
+                        <h3>Maa Meri (Alternative Mix)</h3>
+                        <p>Experimental electronic with quantum-inspired patterns</p>
+                        <audio controls>
+                            <source src="audio/Maa Meri.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="images">
+            <h2>AI Generated Images</h2>
+            <div class="image-grid" id="ai-images-container">
+                <!-- AI Images will be loaded here -->
+                <div class="image-loading">
+                    <div class="image-loading-animation">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>Loading images...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="raw">
+            <h2>Raw Thoughts</h2>
+            <div class="quotes-container">
+                <blockquote>
+                    <p>"Freedom (n.): To ask nothing. To expect nothing. To depend on nothing."</p>
+                    <cite>- Ayn Rand</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Be water, my friend."</p>
+                    <cite>- Bruce Lee</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Rest at the end, not in the middle."</p>
+                    <cite>- Kobe Bryant</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"I always knew one day I was gonna die. But I want to live like a man."</p>
+                    <cite>- Tony Montana</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Great men are not born great, they grow great."</p>
+                    <cite>- Don Vito Corleone</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"We're all whores, Grace. We just sell different parts of ourselves."</p>
+                    <cite>- Thomas Shelby</cite>
+                </blockquote>
+            </div>
+        </section>
+        <!-- Add this section to your index.html -->
+<!-- Replace the existing game section with this in your index.html -->
+<section id="game">
+    <h2>Space Invaders X</h2>
+    <div class="game-container">
+        <div class="game-intro">
+            <p>Defend Earth from waves of alien invaders in this retro-inspired space shooter!</p>
+            <button id="start-game" class="game-btn">Start Game</button>
+            <div class="game-score">
+                <span>Score: <span id="score">0</span></span>
+                <span>Level: <span id="level">1</span></span>
+                <span>Lives: <span id="lives">3</span></span>
+            </div>
+        </div>
+        <div id="game-area">
+            <canvas id="game-canvas" width="800" height="500"></canvas>
+            <div id="game-over" class="game-message hidden">
+                <h3>Game Over!</h3>
+                <p>Your final score: <span id="final-score">0</span></p>
+                <button id="play-again" class="game-btn">Play Again</button>
+            </div>
+            <div id="level-up" class="game-message hidden">
+                <h3>Level Up!</h3>
+                <p>Get ready for more invaders!</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section id="chatbot">
+        <h2>Grumpy Cat Chat</h2>
+        <div class="chatbot-container">
+            <div class="chat-header">
+                <div class="cat-avatar"></div>
+                <h3>Mittens - The Cat Who Doesn't Care</h3>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <p>Ugh, another human. What do you want? I was napping.</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-message" placeholder="Ask me something... or don't. Whatever.">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </section>
+    <!-- Add this section before the closing </main> tag -->
+<section id="universe">
+    <h2>Universe of Knowledge</h2>
+    <div class="universe-container">
+        <div class="universe-intro">
+            <p>Select a complex topic and have it explained like you're five years old.</p>
+        </div>
+        
+        <div class="topic-selector">
+            <button class="topic-btn" data-topic="quantum">Quantum Computing</button>
+            <button class="topic-btn" data-topic="spirituality">Spirituality</button>
+            <button class="topic-btn" data-topic="rocket">Rocket Science</button>
+            <button class="topic-btn" data-topic="ai">Artificial Intelligence</button>
+            <button class="topic-btn" data-topic="climate">Climate Science</button>
+            <button class="topic-btn" data-topic="neuroscience">Neuroscience</button>
+            <button class="topic-btn" data-topic="economics">Economics</button>
+            <button class="topic-btn" data-topic="genetics">Genetic Engineering</button>
+            <button class="topic-btn" data-topic="philosophy">Philosophy of Mind</button>
+            <button class="topic-btn" data-topic="international">International Relations</button>
+        </div>
+        
+        <div class="universe-chat-container hidden" id="universe-chat">
+            <div class="universe-chat-header">
+                <h3 id="universe-topic-title">Topic Expert</h3>
+                <button id="close-universe-chat">&times;</button>
+            </div>
+            <div class="universe-chat-messages" id="universe-chat-messages">
+                <div class="universe-message bot">
+                    <p>Hello! I'm here to explain complex ideas in simple terms. What would you like to know about <span id="selected-topic"></span>?</p>
+                </div>
+            </div>
+            <div class="universe-chat-input">
+                <input type="text" id="universe-user-message" placeholder="Ask anything about this topic...">
+                <button id="universe-send-message">Ask</button>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>ARUN.AI</h3>
+                <p>Martian waiting for AGI</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#images">AI Images</a></li>
+                        <li><a href="#raw">Raw</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/arun3676">GitHub</a></li>
+                        <li><a href="https://medium.com/@arunn9694">Medium</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Arun.ai • All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-details">
+                <!-- Project details will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="image-modal">
+        <div class="modal-content image-modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="AI Generated Image">
+            <div class="image-caption"></div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <svg class="toast-icon success" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <svg class="toast-icon error" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+            <div class="toast-message"></div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="scripts.js"></script>
+
+    <div class="modal" id="image-modal">
+        <div class="modal-content image-modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="AI Generated Image">
+            <div class="image-caption"></div>
+        </div>
+    </div>
+
+    <!-- Add before the closing </body> tag -->
+    <script>
+      // Check if the backend server is running
+      fetch('http://localhost:3001/health')
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'OK') {
+            console.log('✅ Backend server connected successfully!');
+          }
+        })
+        .catch(error => {
+          console.warn('⚠️ Backend server not connected:', error);
+          console.log('Using fallback responses for chatbots');
+        });
+    </script>
+
+    <!-- If you don't have the thumbnail images, add this fallback -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create fallback thumbnails if images don't load
+        const thumbnails = document.querySelectorAll('.music-thumbnail');
+        thumbnails.forEach(thumbnail => {
+            const img = new Image();
+            img.src = thumbnail.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
+            
+            img.onerror = function() {
+                // If image fails to load, add a class for fallback styling
+                thumbnail.classList.add('image-fallback');
+                
+                // Add visual elements to make it look like a music thumbnail
+                if (!thumbnail.querySelector('.fallback-design')) {
+                    const fallbackDesign = document.createElement('div');
+                    fallbackDesign.className = 'fallback-design';
+                    
+                    const iconHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="5.5" cy="17.5" r="2.5"/>
+                            <circle cx="17.5" cy="15.5" r="2.5"/>
+                            <path d="M8 17V5l12-2v12"/>
+                        </svg>
+                    `;
+                    
+                    fallbackDesign.innerHTML = iconHTML;
+                    thumbnail.appendChild(fallbackDesign);
+                }
+            };
+        });
+    });
+    </script>
+</body>
+</html>
