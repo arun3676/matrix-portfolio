@@ -637,8 +637,6 @@ function loadAIImages() {
     // Updated with your exact filenames
     const aiImages = [
         { src: 'images/black cat.jpeg', caption: 'Black Cat', type: 'image' },
-        { src: 'images/cat in cybber punk.png', caption: 'Cat in Cyberpunk', type: 'image' },
-        { src: 'images/cat rockstar video.mp4', caption: 'Cat Rockstar', type: 'video' },
         { src: 'images/darkplace.jpeg', caption: 'Dark Place', type: 'image' },
         { src: 'images/nature home.jpeg', caption: 'Nature Home', type: 'image' }
     ];
@@ -1388,9 +1386,10 @@ function initializeAIChatbotSystem() {
         const header = chatbotSection.querySelector('h2');
         if (header) header.textContent = "Matrix Chat";
         
+        // Updated code
+        // Updated code
         const chatHeader = chatbotSection.querySelector('.chat-header h3');
-        if (chatHeader) chatHeader.textContent = "Neo - Guide to the Matrix";
-    }
+        if (chatHeader) chatHeader.textContent = "Mittens - The Grumpy Cat";
     
     // Add initial message
     addMessage(chatMessages, "The Matrix has you... What do you seek?", false);
@@ -1767,4 +1766,4 @@ document.addEventListener('DOMContentLoaded', function() {
     enhanceUniverseChatbot();    // Enhanced version that connects to backend
     
     // Your other existing initialization code...
-});
+    })}
