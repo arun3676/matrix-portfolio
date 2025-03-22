@@ -2510,10 +2510,9 @@ h2::after {
 }
 
 /* Fix viewport issues */
-@viewport {
-    width: device-width;
-    zoom: 1.0;
-}
+/* Removed @viewport rule for compatibility. Use the following meta tag in your HTML:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
 
 /* Improved touch interactions */
 a, button, .play-button, .ai-image-card, .project, .medium-article {
@@ -3750,4 +3749,111 @@ html, body {
 
 .quantum-theme::before {
     background: linear-gradient(135deg, rgba(153, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.instagram-promo {
+    margin-top: 15px;
+    padding: 10px;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}}
+#instagram-features {
+    margin-top: 4rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--neon-green);
+}
+
+.insta-filter-container {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.filter-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1.5rem;
+}
+
+.filter-before, .filter-after {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.filter-arrow {
+    font-size: 2rem;
+    color: var(--neon-green);
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.matrix-filtered {
+    filter: hue-rotate(100deg) saturate(2) brightness(0.8);
+}
+
+.matrix-effect-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.matrix-effect-preview::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                repeating-linear-gradient(0deg, 
+                rgba(0, 255, 0, 0.15) 0px, 
+                rgba(0, 255, 0, 0.15) 1px, 
+                transparent 1px, 
+                transparent 2px);
+    mix-blend-mode: overlay;
+}
+
+.insta-cta {
+    font-style: italic;
+    color: var(--neon-green);
+    margin-top: 1rem;
+}
+
+.insta-quiz {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--neon-green);
+}
+
+.insta-btn {
+    background-color: var(--neon-green);
+    color: var(--bg-dark);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-family: 'Fira Code', monospace;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.insta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px var(--neon-green);
 }
