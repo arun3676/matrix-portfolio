@@ -1767,3 +1767,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Your other existing initialization code...
     })}
+    // Add this to your scripts.js file
+function fixMobileOverflow() {
+    // Ensure proper resize handling
+    window.addEventListener('resize', function() {
+        document.body.style.width = '100%';
+        document.body.style.overflowX = 'hidden';
+    });
+    
+    // Fix canvas size
+    const canvas = document.querySelector('#matrix-background canvas');
+    if (canvas) {
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+    }
+    
+    // Force recalculation on mobile
+    if (window.innerWidth <= 768) {
+        setTimeout(function() {
+            window.dispatchEvent(new Event('resize'));
+        }, 500);
+    }
+}
+
+// Call this function when the document is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Your existing initialization code
+    
+    // Fix mobile overflow issues
+    fixMobileOverflow();
+});
